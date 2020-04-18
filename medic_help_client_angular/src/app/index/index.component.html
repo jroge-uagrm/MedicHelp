@@ -1,0 +1,10 @@
+<div class="container" *ngIf="loggedPersonName; else contenidoDeInvitado">
+    <h2>Bienvenid@ {{loggedPersonName}}</h2>
+    <p>Contenido de un Usuario</p>
+</div>
+<ng-template #contenidoDeInvitado>
+    <div class="container">
+        <h1>Bienvenid@ Invitado</h1>
+        <p>Contenido de invitado</p>
+    </div>
+</ng-template>

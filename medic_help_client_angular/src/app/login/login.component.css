@@ -1,0 +1,15 @@
+.size {
+    width: 30%;
+    border: 1.5px #0099ff solid;
+    margin-top: 10%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 4px;
+    background-color: #ccebff;
+}
+.loginTitle{
+    text-align: center
+}
+.myDisabled{
+    pointer-events:none;
+    background-color: lightblue;
+}

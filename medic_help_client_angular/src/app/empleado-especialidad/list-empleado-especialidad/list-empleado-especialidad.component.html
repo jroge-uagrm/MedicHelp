@@ -1,0 +1,23 @@
+<div *ngIf="!especialidad">
+    Cargando...
+</div>
+<div class="container"*ngIf="especialidad">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <!-- <th scope="col">Tipo</th> -->
+                
+            </tr>
+        </thead>
+        <tbody *ngFor='let em of especialidad'>
+            <tr>
+                <th scope="row">{{em.nombre}}</th>
+                <th>
+                    <button style="margin-right: 20px" type="button" class="btn btn-success" routerLink="/editempleado/{{em.id}}">Editar</button>
+                    <button class="float-right btn btn-danger ml-2"  (click)="Delete(em.id)">Delete</button>    
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>

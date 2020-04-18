@@ -1,0 +1,13 @@
+<div class="container form-empleado">
+    <h2>AGREGAR ESPECIALIDAD</h2>
+    <form (submit)=addEspecialidad()>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Escribe el nombre" value="Ej: Cardiologo" [(ngModel)]="nombre" [ngClass]="{'is-invalid' : title==='' && formSubmitted }" required>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-block">Guardar</button>
+        <button class="btn btn-danger btn-block" type="button">Cancelar</button>
+    </form>
+</div>

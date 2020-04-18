@@ -1,0 +1,17 @@
+<!-- Editado por Jroge -->
+<div class="container size">
+    <h2 class="loginTitle">Login</h2>
+    <form (submit)="validateLogin()">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input [(ngModel)]="email"[ngModelOptions]="{standalone: true}"[ngClass]="{'is-invalid' : title==='' && formSubmitted }"type="text"class="form-control"id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+            <small id="emailHelp" class="form-text text-muted">{{wrongEmail}}</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input [(ngModel)]="password"[ngModelOptions]="{standalone: true}"[ngClass]="{'is-invalid' : title==='' && formSubmitted }"type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <small id="emailHelp" class="form-text text-muted">{{wrongPassword}}</small>
+        </div>
+        <button [ngClass]="{'myDisabled' : !isAvailable()}" type="submit" class="btn btn-primary btn-block">Ingresar</button>
+    </form>
+</div>

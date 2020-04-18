@@ -1,0 +1,43 @@
+<div *ngIf="!empleado">
+    Cargando...
+</div>
+<div class="container"*ngIf="empleado">
+    <table id="contentToConvertEmpleado" class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th scope="col">CI</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha Nacimiento</th>
+                <th scope="col">Email</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Operaciones</th>
+                <!-- <th scope="col">Tipo</th> -->
+                
+            </tr>
+        </thead>
+        <tbody *ngFor='let em of empleado'>
+            <tr>
+                <th scope="row">{{em.ci}}</th>
+                <th scope="row">{{em.nombre}}</th>
+                <th scope="row">{{em.apellido}}</th>
+                <th scope="row">{{em.fecha_nacimiento}}</th>
+                <th scope="row">{{em.email}}</th>
+                <th scope="row">{{em.telefono}}</th>
+                <th scope="row">{{em.sexo}}</th>
+                <th scope="row">
+                    <button class="btn btn-info">{{em.estado}}</button>
+                </th>
+                <th>
+                    <button type="button" class="btn btn-success" routerLink="/editempleado/{{em.peopleable_id}}">Editar</button>
+                    <button class="float-right btn btn-danger ml-2"  (click)="Delete(em.peopleable_id)">Delete</button>
+                    
+                </th>
+                
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary btn-block" (click)="captureScreenEmpleado()">Descargar lista de empleados</button>
+</div>

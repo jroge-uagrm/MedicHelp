@@ -1,0 +1,58 @@
+<div class="container form-empleado">
+    <h2>AGREGAR EMPLEADO</h2>
+    <form (submit)=addEmpleado()>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Nombres</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Escribe tu nombre" value="Ej: Marcos Daniel" [(ngModel)]="nombre" [ngClass]="{'is-invalid' : title==='' && formSubmitted }" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="apellido">Apellidos</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" [(ngModel)]="apellido" [ngClass]="{'is-invalid' : title==='' && formSubmitted }" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="ci">CI</label>
+                <input type="text" class="form-control" id="ci" name="ci" placeholder="CI" [(ngModel)]="ci" [ngClass]="{'is-invalid' : title==='' && formSubmitted }" value="Ej: 5346785" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="telefono">Teléfono</label>
+                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" [(ngModel)]="telefono" [ngClass]="{'is-invalid' : title==='' && formSubmitted }" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="DD/MM/YY" [(ngModel)]="fecha_nacimiento" [ngClass]="{'is-invalid' : title==='' && formSubmitted }" required>
+            </div>
+            <div class="form-group col-md-4 mb-3">
+                <label for="sexo">Sexo</label>
+                <select class="form-control" id="sexo" name="sexo" [(ngModel)]="sexo" [ngClass]="{'is-invalid' : title==='' && formSubmitted }">
+                    <option value="f">Femenino</option>
+                    <option value="m">Masculino</option>
+                    <option value="o">Otro</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-8 mb-3">
+                <label for="email" class="">Email</label>
+                <div class="">
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" [ngClass]="{'is-invalid' : title==='' && formSubmitted }" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group col-md-4 mb-3">
+                <label for="type">Tipo</label>
+                <select class="form-control" id="type" name="type" [(ngModel)]="type" [ngClass]="{'is-invalid' : title==='' && formSubmitted }">
+                    <option value="e">Enfermero</option>
+                    <option value="m">Médico</option>
+                    <option value="b">Bioquímico</option>
+                    <option value="r">Recepcionista</option>
+                    <option value="a">Administrador</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-block">Guardar</button>
+        <button class="btn btn-danger btn-block" type="button">Cancelar</button>
+    </form>
+</div>
