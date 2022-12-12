@@ -27,7 +27,7 @@
     "@angular/platform-browser-dynamic": "~8.2.5",
     "@angular/router": "~8.2.5",
     "bootstrap": "^4.3.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "html2canvas": "^1.0.0-rc.5",
     "jquery": "^3.4.1",
     "jspdf": "^1.5.3",
